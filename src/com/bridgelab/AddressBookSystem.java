@@ -4,16 +4,13 @@ import java.util.*;
 
 public class AddressBookSystem {
     public static void main(String[] args) {
-        
-        System.out.println("Welcome In Address Book System Program ");
-        //variables
+        System.out.println("Welcome In Address Book System Program On Master Branch");
         String firstName, lastName, address, city, state, email;
         int zip;
         long phoneNo;
 
         Scanner sc = new Scanner(System.in);
         AddressBook contact = new AddressBook();
-        
         System.out.print("Enter First Name  : ");
         firstName = sc.nextLine();
         contact.setFirstName(firstName);
