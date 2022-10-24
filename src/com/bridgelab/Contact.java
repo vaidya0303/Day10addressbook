@@ -23,7 +23,7 @@ public class Contact {
         this.email = email;
     }
 
-    public String getEmail() {
+    public String getEmail()  {
         return email;
     }
 }
