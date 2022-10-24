@@ -1,13 +1,11 @@
-  package com.bridgelab;
+package com.bridgelab;
+
+import java.util.*;
 
 public class AddressBook extends Contact {
     String address, city, state;
     int zip;
     long phoneNo;
-    String Email;
-    String FirstName;
-    String lastName;
-
 
     public void setAddress(String address) {
         this.address = address;
