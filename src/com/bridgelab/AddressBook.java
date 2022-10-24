@@ -29,7 +29,7 @@ public class AddressBook extends Contact {
 
     public String getState() {
         return state;
-    }
+    } 
 
     public void setPhoneNo(long phoneNo) {
         this.phoneNo = phoneNo;
