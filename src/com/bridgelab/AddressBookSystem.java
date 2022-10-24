@@ -1,15 +1,18 @@
 package com.bridgelab;
 
+import com.bridgelab.AddressBook;
+
 import java.util.*;
 
 public class AddressBookSystem {
     public static void main(String[] args) {
-        System.out.println("Welcome In Address Book System Program On Master Branch");
+        System.out.println("Welcome In Address Book System Program ");
         String firstName, lastName, address, city, state, email;
         int zip;
         long phoneNo;
 
         Scanner sc = new Scanner(System.in);
+
         AddressBook contact = new AddressBook();
         System.out.print("Enter First Name  : ");
         firstName = sc.nextLine();
@@ -43,15 +46,21 @@ public class AddressBookSystem {
         zip = sc.nextInt();
         contact.setZip(zip);
 
+        OperateContact operate = new OperateContact();
+        operate.showContact(contact);
+        System.out.print("\nDo you want to edit? press Y / N : ");
+        char editOption = sc.next().charAt(0);
+        if (editOption == 'Y') {
+            operate.editContact(contact);
+        }
+        operate.showContact(contact);
+        System.out.print("\nDo you want to delete? press Y / N : ");
+        char deleteOption = sc.next().charAt(0);
+        if (deleteOption == 'Y') {
+            contact = operate.deleteContact(contact);
+        }
+        operate.showContact(contact);
         sc.close();
-
-        System.out.print("\nFirst Name  : " + contact.getFirstName());
-        System.out.print("\n\nLast Name   : " + contact.getLastName());
-        System.out.print("\n\nAddress     : " + contact.getAddress());
-        System.out.print("\n\nCity        : " + contact.getCity());
-        System.out.print("\n\nState       : " + contact.getState());
-        System.out.print("\n\nPhone Number : " + contact.getPhoneNo());
-        System.out.print("\n\nE-mail      : " + contact.getEmail());
-        System.out.print("\n\nZip         : " + contact.getZip());
     }
+
 }
