@@ -39,7 +39,7 @@ public class AddressBook extends Contact {
         return phoneNo;
     }
 
-    public void setZip(int zip) {
+    public void setZip(int zip)   {
         this.zip = zip;
     }
 
